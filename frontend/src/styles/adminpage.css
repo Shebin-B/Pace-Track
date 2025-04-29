@@ -1,0 +1,147 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    width: 100%;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Overall Layout */
+  .admin-container {
+    display: flex;
+    flex-direction: column; /* Stacks elements on mobile */
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(to right, #02022b, #410202);
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+  }
+  
+  /* Main Content */
+  .main-content {
+    width: 100%;
+    padding: 50px 20px;
+    text-align: center;
+    transition: margin-left 0.4s ease-in-out;
+  }
+  
+  .sidebar.closed + .main-content {
+    margin-left: 0;
+  }
+  
+  /* Header */
+  header h1 {
+    font-size: 3.8rem;
+    font-weight: bold;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+  }
+  
+  .motive {
+    font-size: 1.6rem;
+    font-weight: 500;
+    max-width: 700px;
+    margin: 15px auto;
+    opacity: 0.9;
+  }
+  
+  /* Illustration Section */
+  .illustration-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 50px 0;
+  }
+  
+  .illustration {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Navigation Icons */
+  .navigation-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 45px;
+    margin-top: 40px;
+  }
+  
+  .nav-card {
+    background: white;
+    color: black;
+    padding: 34px 119px;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background 0.3s;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .nav-card:hover {
+    transform: scale(1.1);
+    background: #2494bd;
+    color: white;
+  }
+  
+  .icon {
+    font-size: 4rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .main-content {
+      padding: 40px;
+    }
+  
+    header h1 {
+      font-size: 3rem;
+    }
+  
+    .motive {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .main-content {
+      padding: 20px;
+    }
+  
+    header h1 {
+      font-size: 2.5rem;
+    }
+  
+    .motive {
+      font-size: 1.4rem;
+    }
+  
+    .illustration-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .navigation-icons {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .nav-card {
+      width: 80%;
+    }
+  }
+  
